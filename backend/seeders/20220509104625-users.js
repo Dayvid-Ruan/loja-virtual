@@ -7,6 +7,7 @@ module.exports = {
         name: "User Test",
         email: "user@test.com",
         password: "userTest123",
+        saldo: 5.00,
         role: "usuario"
       },
       {

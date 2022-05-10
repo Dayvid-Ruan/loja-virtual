@@ -17,10 +17,10 @@ const userLogin = async (email, password) => {
     throw (notFoundError);
   }
 
-  const { name, role } = userInfo;
+  const { name, saldo, role } = userInfo;
   const token = generateToken(userInfo);
 
-  return { name, role, token };
+  return { name, saldo, role, token };
 };
 
 module.exports = {
