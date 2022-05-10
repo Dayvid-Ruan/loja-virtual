@@ -17,6 +17,9 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
+      saldo: {
+        type: Sequelize.DECIMAL(4, 2)
+      },
       role: {
         type: Sequelize.STRING
       }
