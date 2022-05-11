@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import LoginPage from "./pages/loginPage";
-import UserPage from "./pages/userPage";
-import AdminPage from "./pages/adminPage";
+import LoginPage from "./pages/login/loginPage";
+import UserPage from "./pages/user/userPage";
+import AdminPage from "./pages/adminPage/adminPage";
 
 function AppRouter() {
   return (
