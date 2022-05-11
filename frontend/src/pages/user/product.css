@@ -1,0 +1,38 @@
+body {
+  background-color: rgb(197, 11, 197);
+}
+
+.product {
+  align-items: center;
+  width: 40%;
+  border: 1px solid black;
+  background-color: white;
+  box-shadow: -5px 5px 5px 1px rgb(197, 11, 190);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.productList {
+  display: flex;
+  justify-content: center;
+    background-color: rgb(197, 11, 197);
+  flex-wrap: wrap;
+}
+
+.price {
+  background-color: rgb(231, 207, 225);
+  border-radius: 20%;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 5px;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.name {
+  /* background-color: rgb(231, 207, 225); */
+  display: flex;
+  font-size: 20px;
+}

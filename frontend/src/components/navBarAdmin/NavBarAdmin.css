@@ -1,0 +1,27 @@
+body {
+  margin: 0; 
+}
+
+.navAdmin {
+background-color: rgb(255, 192, 239);
+margin-right: 50px;
+display: flex;
+justify-content: flex-end;
+width: 100%;
+}
+
+.linkAdmin {
+  text-decoration: none;
+  color: rgb(197, 11, 197);
+}
+
+.adminName {
+  margin: 0;
+  padding-right: 10px;
+  color: rgb(197, 11, 197);
+}
+
+.divAdmin {
+  padding-left: 15px;
+  padding-right: 1%;
+}
