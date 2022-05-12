@@ -10,6 +10,11 @@ const updateSaldo = async (saldo, id) => {
   }
   const [userInfo] = await user.update({saldo}, {where: { id }});
 
+  if (userInfo === 1) {
+    const sucessoMensagem = generateErrorObj("sucesso", "Usuario atualizado com sucesso");
+    throw sucessoMensagem;
+  }
+
   if (userInfo === 0) {
     const notFoundError = generateErrorObj("conflict", "valor já correspondente");
     throw notFoundError;

@@ -11,6 +11,8 @@ const errorMiddleware = ({ code, message }, _req, res, next) => {
       return res.status(401).json({ message });
     case "not_found":
       return res.status(404).json({ message });
+    case "sucesso":
+      return res.status(200).json({ message });
     default:
       return res.status(500).json({ message });
     }

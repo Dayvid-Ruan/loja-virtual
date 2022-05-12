@@ -3,7 +3,7 @@ body {
 }
 
 .navAdmin {
-background-color: rgb(255, 192, 239);
+background-color: rgb(54, 9, 160);
 margin-right: 50px;
 display: flex;
 justify-content: flex-end;
@@ -12,16 +12,21 @@ width: 100%;
 
 .linkAdmin {
   text-decoration: none;
-  color: rgb(197, 11, 197);
+  color: rgb(197, 11, 190);
 }
+
 
 .adminName {
   margin: 0;
+  padding-left: 10px;
   padding-right: 10px;
-  color: rgb(197, 11, 197);
+  background-color: rgb(54, 9, 160);
+  color: rgb(197, 11, 190)
 }
 
 .divAdmin {
   padding-left: 15px;
   padding-right: 1%;
+  background-color: rgb(54, 9, 160);
+  border-left: 1px solid rgb(54, 9, 160);
 }
