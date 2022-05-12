@@ -22,7 +22,6 @@ describe("GET/api/products", () => {
       response = await chai.request(server)
         .get("/products")
         .auth(token);
-      // console.log(response.body[0]);
     });
     it("retorna o código de status 200", () => {
       expect(response).to.have.status(200);
