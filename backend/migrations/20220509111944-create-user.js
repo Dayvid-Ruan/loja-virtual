@@ -18,7 +18,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       saldo: {
-        type: Sequelize.DECIMAL(4, 2)
+        type: Sequelize.DECIMAL(10, 2)
       },
       role: {
         type: Sequelize.STRING
