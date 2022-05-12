@@ -10,11 +10,13 @@ function NavBarAdmin () {
           <p>{ userInfo.name }</p>
         </div>  
         <div className="divAdmin">
-          <p>
-            <a className="linkAdmin" href="/" onClick={ () => localStorage.removeItem("user") }>
+          <div className="logoutAdmin">
+            <p>
+              <a className="linkAdmin" href="/" onClick={ () => localStorage.removeItem("user") }>
             Logout
-            </a>
-          </p>
+              </a>
+            </p>
+          </div>
         </div>
       </nav>
     </div>
