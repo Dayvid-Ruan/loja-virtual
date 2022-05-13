@@ -1,4 +1,4 @@
 [build]
-base = "."
+base = "./frontend"
 comand = "npm run build"
 publish = "./build/" 
