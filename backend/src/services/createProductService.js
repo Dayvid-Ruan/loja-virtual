@@ -13,7 +13,11 @@ const createProduct = async (name, price) => {
     const notFoundError = generateErrorObj("conflict", "produto já existente");
     throw notFoundError;
   }
-  
+
+  if (create) {
+    const notFoundError = generateErrorObj("sucesso", "Produto criado com sucesso");
+    throw notFoundError;
+  }
   return productInfo;
 };
 

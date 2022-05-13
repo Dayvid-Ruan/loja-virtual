@@ -5,11 +5,11 @@ function NavBarUser () {
   const userInfo = JSON.parse(localStorage.getItem("user"));
   return (
     <div className="navbar">
-      <nav className="nav">
+      <nav className="navUser">
         <div className="divUser">
           <p>
             <a className="linkUser" href="/" onClick={ () => localStorage.removeItem("user") }>
-            Logout
+            Sair
             </a>
           </p>
         </div>
@@ -17,7 +17,7 @@ function NavBarUser () {
           <p>{ userInfo.name }</p>
         </div>
         <div className="userSaldo">
-          <p>saldo: R${ userInfo.saldo }</p>
+          <p>Saldo: R${ userInfo.saldo }</p>
         </div>
       
       </nav>

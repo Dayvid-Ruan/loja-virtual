@@ -1,6 +1,7 @@
 import React, { useState} from "react";
 import { useNavigate } from "react-router-dom";
 import fetchLogin from "../../services/login";
+import "./login.css";
 
 function login () {
   const regex = /^[a-z0-9_.-]+@[a-z]+\.[a-z]{2,3}(?:\.[a-z]{2})?$/;
@@ -26,31 +27,36 @@ function login () {
   }
 
   return(
-    <div>
-      <div>
-        <form>
+    <div className="loginPageDiv">
+      <div className="loginPage">
+        <form className="formLogin">
+          <h1 className="titleLogin">Login</h1> 
+          <div><p className="infoLogin">Email:</p></div>
           <label>
-         Login:
             <input
+              className="inputLogin"
               type="email" 
               id="email"
               name="email"
-              placeholder="Email"
+              placeholder="Digite seu email"
               value={ email }
               onChange={(e) => setEmail(e.target.value)}
             />
           </label>
+          <div><p className="infoLogin">Password:</p></div>
           <label>
-            <input 
+            <input
+              className="inputLogin"
               type="password"
               id="password"
               name="password"
-              placeholder="Password"
+              placeholder="Digite sua senha"
               value={ password }
               onChange={(e) => setPassword(e.target.value)}
             />
           </label>
           <button
+            className="buttonLogin"
             type="submite"
             onClick={ handleClickLogin }
             disabled={

@@ -13,7 +13,7 @@ function NavBarAdmin () {
           <div className="logoutAdmin">
             <p>
               <a className="linkAdmin" href="/" onClick={ () => localStorage.removeItem("user") }>
-            Logout
+            Sair
               </a>
             </p>
           </div>

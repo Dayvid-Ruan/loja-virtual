@@ -2,26 +2,28 @@ body {
   margin: 0; 
 }
 
-.nav {
-background-color: rgb(255, 192, 239);
-margin-right: 50px;
-display: flex;
-justify-content: flex-start;
-width: 100%;
+.navUser {
+  background-color: rgb(54, 9, 160);
+  margin-right: 50px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .linkUser {
   text-decoration: none;
-  color: rgb(197, 11, 197);
+  color: rgb(197, 11, 190);
 }
 
 .userName {
   margin: 0;
+  padding-left: 10px;
   padding-right: 10px;
-  color: rgb(197, 11, 197);
+  color: rgb(197, 11, 190)
 }
 
 .userSaldo {
+  padding-right: 20px;
   padding-left: 5px;
   color: rgb(197, 11, 197);
 }
