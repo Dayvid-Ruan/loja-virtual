@@ -1,0 +1,45 @@
+.loginPageDiv {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+.titleLogin {
+  color: rgb(197, 11, 190);
+}
+
+.infoLogin {
+  margin: 0;
+  display: flex;
+  color: rgb(197, 11, 190);
+  font-size: 18px;
+}
+
+.loginPage {
+  display: flex;
+  justify-content: center;
+}
+
+.inputLogin {
+  margin: 5px;
+}
+
+.formLogin {
+  padding-left: 15px;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  background-color: rgb(54, 9, 160);
+  border: 1px solid black;
+}
+
+.buttonLogin {
+  background-color: rgb(197, 11, 190);
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 3px;
+}

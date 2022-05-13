@@ -82,9 +82,7 @@ function Admin () {
         <div className="errorProduct">
           {
             error && (
-              <p>
-                { error }
-              </p>
+              <p>{ error }</p>
             )
           }
         </div>

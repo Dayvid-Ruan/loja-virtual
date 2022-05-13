@@ -1,11 +1,11 @@
 import axios from "axios";
 
 const getAllProducts = async () => {
-  const userInfo = localStorage.getItem("user");
+  const userInfo = JSON.parse(localStorage.getItem("user"));
+  console.log(userInfo.token);
   try {
     const response = await axios.get("http://localhost:3001/products", {
       headers: {
-        "Content-type": "application/json; charset=UTF-8",
         Authorization: userInfo.token,
       }
     });
