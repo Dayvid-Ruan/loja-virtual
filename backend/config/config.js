@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const options = {
   host: process.env.MYSQL_HOST || "localhost",
-  port: process.env.MYSQL_PORT || "3306",
+  port: process.env.MYSQL_PORT || "3001",
   database: 
     `${process.env.MYSQL_DB_NAME || "loja_virtual"}`,
   username: process.env.MYSQL_USER || "Dayvid",
