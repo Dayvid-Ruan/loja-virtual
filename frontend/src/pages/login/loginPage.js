@@ -69,7 +69,7 @@ function login () {
         <div>
           {
             error && (
-              <p>
+              <p className="errorLogin">
             Usuário ou Senha inválidos
               </p>
             )

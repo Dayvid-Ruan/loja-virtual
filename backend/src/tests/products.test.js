@@ -21,16 +21,13 @@ describe("GET/api/products", () => {
 
       response = await chai.request(server)
         .get("/products")
-        .auth(token);
+        .set("Authorization", token);
     });
     it("retorna o código de status 200", () => {
       expect(response).to.have.status(200);
     });
-    it("retorna um objeto", () => {
+    it("retorna um array de objetos", () => {
       expect(response.body).to.be.a("array");
-    });
-    it("retorna 6 produtos", () => {
-      expect(response.body.length).to.be.equal(6);
     });
     it("o primeiro produto esperado", () => {
       expect(response.body[0]).to.have.property("name", "Product1");
