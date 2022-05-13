@@ -1,4 +1,4 @@
 [build]
-base = "./frontend/."
+base = "/home/david/voll_soluctions/loja-virtual/frontend"
 comand = "npm run build"
 publish = "./build/" 
