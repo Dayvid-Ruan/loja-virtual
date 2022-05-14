@@ -1,41 +1,46 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import fetchLogin from "../../services/login";
-import "./login.css";
+import fetchRegisterUSer from "../../services/registerUSer";
 
-function login () {
-  const regex = /^[a-z0-9_.-]+@[a-z]+\.[a-z]{2,3}(?:\.[a-z]{2})?$/;
-  const minPassword = 6;
+function regiterUser() {
   const navigate = useNavigate();
+  const minPassword = 6;
+  const regex = /^[a-z0-9_.-]+@[a-z]+\.[a-z]{2,3}(?:\.[a-z]{2})?$/;
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [password, setPassword] = useState("");
 
-  async function handleClickLogin (event) {
+  async function handleClickRegister (event) {
     event.preventDefault();
-    const response = await fetchLogin(email, password);
+    const response = await fetchRegisterUSer(name, email, password);
     if (response.message) {
       return setError(response.message);
     }
     if (response.role === "usuario") {
       localStorage.setItem("user", JSON.stringify(response));
       navigate("/user");
-    } else {
-      localStorage.setItem("admin", JSON.stringify(response));
-      navigate("/admin");
-    }
+    } 
   }
 
-  async function handleClickRegister (event) {
-    event.preventDefault();
-    navigate("/register");
-  }
 
-  return(
+  return (
     <div className="loginPageDiv">
       <div className="loginPage">
         <form className="formLogin">
-          <h1 className="titleLogin">Login</h1> 
+          <h1 className="titleLogin">Fazer registro</h1> 
+          <div><p className="infoLogin">Nome:</p></div>
+          <label>
+            <input
+              className=""
+              type="name" 
+              id="nome"
+              name="nome"
+              placeholder="Digite seu email"
+              value={ name }
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
           <div><p className="infoLogin">Email:</p></div>
           <label>
             <input
@@ -60,27 +65,15 @@ function login () {
               onChange={(e) => setPassword(e.target.value)}
             />
           </label>
-          <div className="buttonDiv">
-            <div className="divButtonLogin">
-              <button
-                className="buttonLogin"
-                type="submite"
-                onClick={ handleClickLogin }
-                disabled={
-                  !(regex.test(email) && password.length >= minPassword)
-                }
-              >
-          Login
-              </button>
-            </div>
-            <button
-              className="buttonLogin"
-              type="submite"
-              onClick={ handleClickRegister }
-            >
-          Fazer registro
-            </button>
-          </div>
+          <button
+            className="buttonLogin"
+            type="submite"
+            onClick={ handleClickRegister }
+            disabled={
+              !(regex.test(email) && password.length >= minPassword)
+            }>
+          Registrar
+          </button>
         </form>
         <div>
           {
@@ -96,4 +89,4 @@ function login () {
   );
 }
 
-export default login;
+export default regiterUser;
