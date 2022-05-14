@@ -31,7 +31,14 @@
   </div>
  </div>
  
- <div></div>
+ <h2></h2>
+ 
+ <div>
+  <h3>Acessar telas: Existe a possibilidade de fazer um registro e assim já ser renderizado para tela de produtos</h3>
+  <h4>caso prefira voçê pode utilizar os usuários fixos:</h4>
+  <p>User: Email: "user@test.com" password: "userTest123"
+  <p>Admin: Email: "admin@test.com" password: "adminTest123"
+</div>
  
  <h2></h2>
  
