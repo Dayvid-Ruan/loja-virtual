@@ -6,6 +6,7 @@ const getProductsRouter = require("../routes/getProductsRouter");
 const createProductRouter = require("../routes/createProductRouter");
 const updateSaldoRouter = require("../routes/updateSaldo");
 const getAllUserRouter = require("../routes/getAllUserRouter");
+const registerUSerRouter = require("../routes/registerUserRouter");
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use("/products", getProductsRouter);
 app.use("/product/create", createProductRouter);
 app.use("/user", updateSaldoRouter);
 app.use("/user", getAllUserRouter);
+app.use("/registerUser", registerUSerRouter);
 
 app.use(errorMiddleware);
 
